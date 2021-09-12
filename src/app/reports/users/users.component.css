@@ -1,13 +1,17 @@
-.users-info{
-  display:flex;
+.users-info {
+  display: flex;
 }
 
-#info{
-  background-color: #3F51B5;
-  color: white;
-  font-size:1.2rem;
+#info {
+  background-color: #3f51b5;
 }
 
-#users-list{
+#users-list {
   align-self: center;
+}
+
+.info {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
 }

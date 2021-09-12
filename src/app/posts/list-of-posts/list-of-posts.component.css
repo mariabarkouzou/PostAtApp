@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 35px;
   margin-bottom: 20px;
 }
 
@@ -21,4 +21,34 @@ p {
   width: 350px;
   height: 300px;
   border: 1px solid rgb(148, 146, 146);
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.add-btn {
+  background-color: cornflowerblue;
+  height: 40px;
+  border: 1px solid cornflowerblue;
+  border-radius: 20px;
+}
+
+.add-btn:hover {
+  background-color: darkgray;
+}
+
+.create-title {
+  font-style: italic;
+}
+
+.add-link {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
 }

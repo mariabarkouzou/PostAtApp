@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+.hover:hover {
+  background-color: cornflowerblue;
+}
+
 #posts {
   color: white;
   font-size: 1.5rem;
