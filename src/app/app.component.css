@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  max-width: 500px;
+}

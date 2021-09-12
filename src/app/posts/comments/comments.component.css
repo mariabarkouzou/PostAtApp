@@ -1,0 +1,12 @@
+.container-comments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.comments {
+  width: 400px;
+  height: 250px;
+  flex-grow: 1;
+}
