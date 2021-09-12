@@ -15,3 +15,12 @@
   font-size: 1.2rem;
   text-decoration: none;
 }
+
+span {
+  width: 300px;
+}
+
+.action-link {
+  padding: 10px;
+  text-decoration: none;
+}

@@ -1,4 +1,8 @@
-<mat-list *ngFor= "let users of Users" role="list" class="users-info">
-  <mat-list-item role="listitem" id="users-list">{{users.name}}</mat-list-item>
-  <button id="info"><a href="info" class="info">Info</a></button>
+<mat-list *ngFor="let users of Users" role="list" class="users-info">
+  <mat-list-item role="listitem" id="users-list"
+    ><span> {{ users.name }} </span> |
+    <a class="action-link" [routerLink]="['/reports/view', users.id]">View</a> |
+    <a class="action-link" [routerLink]="['/reports/edit', users.id]">Edit</a>
+  </mat-list-item>
+  <!-- <button id="info"><a href="info" class="info">Info</a></button> -->
 </mat-list>
