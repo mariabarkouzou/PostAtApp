@@ -11,9 +11,8 @@ export class PostService {
   Posts() {
     return this.http.get(this.baseUrl + 'posts');
   }
-savePostData( data: any ){
-  console.log(data)
 
-}
-
+  addPost(postObj: any) {
+    return this.http.post(this.baseUrl + 'posts', postObj);
+  }
 }
