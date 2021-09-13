@@ -1,14 +1,16 @@
 <div class="create">
   <h1 class="create-title">We'd love to know what you think!</h1>
-  <button class="add-btn"><a href="/posts/create-post" class="add-link">Create a post</a></button>
+  <button class="add-btn">
+    <a href="/posts/create-post" class="add-link">Create a post</a>
+  </button>
 </div>
 
 <div class="container">
   <mat-card *ngFor="let posts of Posts" class="post-info">
     <h1>{{ posts.title }}</h1>
     <p>{{ posts.body }}</p>
-    <a href="/posts/comment-post" id="comment-title">We are happy to read your comment!</a>
+    <a href="/posts/comment-post" id="comment-title"
+      >We are happy to read your comment!Click here and add one!</a
+    >
   </mat-card>
-
 </div>
-   

@@ -1,7 +1,9 @@
+<a href="/posts"><img src="/assets/images/back.png" ></a>
   <div class="container-comments">
     <mat-card *ngFor="let comments of Comments" class="comments">
-      <h1>{{comments.name}}</h1>
-      <p>{{comments.email}}</p>
-      <p>{{ comments.body}}</p>
+<h1>Comments on Post: {{comments.postId}}</h1>
+      <p>Name: {{comments.name}}</p>
+      <p>Email: {{comments.email}}</p>
+      <p>Body: {{ comments.body}}</p>
 </mat-card>
  </div>
