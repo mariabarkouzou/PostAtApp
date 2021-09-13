@@ -9,7 +9,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, MAT_SNACK_BAR_DEFAULT_OPTIONS_FACTORY} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommentsComponent,
     CreatePostComponent,
   ],
-  imports: [CommonModule, MatListModule,MatGridListModule,MatCardModule,MatFormFieldModule,FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, MatSnackBarModule,MatListModule,MatGridListModule,MatCardModule,MatFormFieldModule,FormsModule, ReactiveFormsModule],
+  providers: [ { 
+    provide: MAT_SNACK_BAR_DEFAULT_OPTIONS , useValue: { duration: 2500}
+  }]
 })
 export class PostsModule {}

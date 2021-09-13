@@ -1,18 +1,31 @@
 <h1>We can't wait to read your post!</h1>
-
-<form [formGroup] = "createPostForm" (submit)="SaveData()">
-  <label for="title">Title</label>
-  <br />
-  <br />
-  <input type="text" id="title" name="title" class="title" formControlTitle="title"/>
-  <br />
-  <br />
-  <label for="input">Body</label>
-  <br />
-  <br />
-  <textarea id="input" name="input" rows="20" cols="180" maxlength="600" formControlBody="body">
-Enter text here...</textarea
-  >
-  <button type="submit" id="submit-btn">Submit</button>
-</form>
-
+<mat-card>
+  <form [formGroup]="createPostForm" (submit)="SaveData()">
+    <label for="title">Title</label>
+    <br />
+    <br />
+    <input
+      type="text"
+      id="title"
+      name="title"
+      class="title"
+      formControlName="title"
+    />
+    <br />
+    <br />
+    <label for="input">Body</label>
+    <br />
+    <br />
+    <textarea
+      id="input"
+      name="input"
+      rows="20"
+      cols="180"
+      maxlength="200"
+      formControlName="body"
+    >
+    Enter text here...</textarea
+    >
+    <button type="submit" id="submit-btn">Submit</button>
+  </form>
+</mat-card>
