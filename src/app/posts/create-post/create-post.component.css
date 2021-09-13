@@ -9,11 +9,11 @@ form {
 
 .title {
   font-size: 24px;
-  width: 1280px;
+  width: 1250px;
+  height: 40px;
 }
 
 h1 {
-  margin-top: 20px;
   font-style: italic;
   text-align: center;
 }
