@@ -26,7 +26,7 @@ export class CreatePostComponent implements OnInit {
   SaveData() {
     this.postService.addPost(this.createPostForm.value).subscribe(
       (data) => {
-        this._snackBar.open('Post has been submitted successfully');
+        this._snackBar.open('Post has been successfully submitted ');
       },
       (err) => {
         this._snackBar.open("Post couldn't be submitted");

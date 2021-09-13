@@ -1,0 +1,28 @@
+<h1 style="font-weight: bold">What do you think?</h1>
+<mat-card>
+  <form [formGroup]="commentPostForm" (submit)="PostComment()">
+    <label for="name">Name</label>
+    <br />
+    <br />
+    <input type="text" id="name" name="name" formControlName="name" />
+    <br />
+    <br />
+    <label for="email">Email</label>
+    <br />
+    <br />
+    <input type="email" id="email" name="email" formControlName="email" />
+    <br />
+    <br />
+    <label for="comment">Comment</label>
+    <br />
+    <br />
+    <textarea
+      rows="5"
+      cols="83"
+      maxlength="200"
+      placeholder="Write your comment here..."
+      formControlName="body"
+    ></textarea>
+    <button type="submit" id="submit-btn">Submit</button>
+  </form>
+</mat-card>

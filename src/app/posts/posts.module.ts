@@ -9,7 +9,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, MAT_SNACK_BAR_DEFAULT_OPTIONS_FACTORY} from '@angular/material/snack-bar';
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
+import { CommentPostComponent } from './comment-post/comment-post.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, MAT_SNACK_BAR_DEFAULT_
     PhotosComponent,
     CommentsComponent,
     CreatePostComponent,
+    CommentPostComponent
   ],
   imports: [CommonModule, MatSnackBarModule,MatListModule,MatGridListModule,MatCardModule,MatFormFieldModule,FormsModule, ReactiveFormsModule],
   providers: [ { 

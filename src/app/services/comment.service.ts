@@ -13,5 +13,7 @@ export class CommentService {
     return this.http.get(this.baseUrl + 'comments');
   }
 
-  
+  addComment(commentObj: any) {
+    return this.http.post(this.baseUrl + 'comments', commentObj);
+  }
 }

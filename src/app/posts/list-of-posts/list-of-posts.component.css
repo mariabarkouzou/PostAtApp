@@ -18,8 +18,8 @@ p {
 
 .post-info {
   flex-grow: 1;
-  width: 350px;
-  height: 300px;
+  width: 450px;
+  height: 260px;
   border: 1px solid rgb(148, 146, 146);
 }
 
@@ -43,12 +43,14 @@ p {
   background-color: darkgray;
 }
 
-.create-title {
-  font-style: italic;
-}
-
 .add-link {
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
+}
+
+#comment-title {
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 100px;
 }
