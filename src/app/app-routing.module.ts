@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommentsComponent } from './posts/comments/comments.component';
 import { CreatePostComponent } from './posts/create-post/create-post.component';
+import { DeletePostComponent } from './posts/delete-post/delete-post.component';
 import { PostsComponent } from './posts/list-of-posts/list-of-posts.component';
 import { PhotosComponent } from './posts/photos/photos.component';
 import { BarChartComponent } from './reports/bar-chart/bar-chart.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'photos', component: PhotosComponent },
       { path: 'comments', component: CommentsComponent },
       { path: 'create-post', component: CreatePostComponent },
+      {path:"delete-post/:id" , component: DeletePostComponent}
     ],
   },
   {

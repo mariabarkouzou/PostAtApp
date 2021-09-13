@@ -15,4 +15,8 @@ export class PostService {
   addPost(postObj: any) {
     return this.http.post(this.baseUrl + 'posts', postObj);
   }
+
+  deletePost(id: any){
+    return this.http.delete(this.baseUrl + "posts/" + id)
+  }
 }
