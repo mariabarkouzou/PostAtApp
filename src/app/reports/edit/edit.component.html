@@ -1,1 +1,40 @@
-<p>edit works!</p>
+<div *ngIf="dataLoaded">
+  <form [formGroup]="editUserForm" (submit)="updateUser()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Website</mat-label>
+      <input matInput formControlName="website" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Company</mat-label>
+      <input matInput formControlName="company" />
+    </mat-form-field>
+
+    <button type="submit" id="submit-btn">Submit</button>
+  </form>
+</div>
