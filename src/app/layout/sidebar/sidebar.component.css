@@ -15,31 +15,25 @@
   background-color: #7d8acd;
   height: 50px;
   border: 1px solid #7d8acd;
+  color: white;
+  font-size: 1.7rem;
+  cursor:default;
 }
 .accent {
   background-color: #ff4081;
   height: 50px;
   border: 1px solid #ff4081;
+  color: white;
+  font-size: 1.7rem;
+  cursor:default;
 }
 
 a {
   color: black;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
 .hover:hover {
-  background-color: cornflowerblue;
-}
-
-#posts {
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-#reports {
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
+  background-color: rgb(162, 191, 247);
 }

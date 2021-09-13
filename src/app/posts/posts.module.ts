@@ -7,6 +7,9 @@ import { CommentsComponent } from './comments/comments.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,6 +18,6 @@ import {MatCardModule} from '@angular/material/card';
     CommentsComponent,
     CreatePostComponent,
   ],
-  imports: [CommonModule, MatListModule,MatGridListModule,MatCardModule],
+  imports: [CommonModule, MatListModule,MatGridListModule,MatCardModule,MatFormFieldModule,FormsModule, ReactiveFormsModule],
 })
 export class PostsModule {}

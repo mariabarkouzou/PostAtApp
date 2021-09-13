@@ -29,7 +29,7 @@ export class BarChartComponent implements OnInit {
   public barChartPlugins = [];
 
   public barChartData: ChartDataSets[] = [
-    { data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10], label: 'Posts' },
+    { data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10], label: 'Posts per User' },
   ];
 
   constructor() {}
