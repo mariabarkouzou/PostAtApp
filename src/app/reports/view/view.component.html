@@ -1,1 +1,29 @@
-<p>view works!</p>
+<mat-card *ngIf="userDetails" class="user-details">
+  <mat-card-title> {{ userDetails.name }} </mat-card-title>
+  <mat-card-content>Username: {{ userDetails.username }}</mat-card-content>
+  <mat-card-content>Email: {{ userDetails.email }}</mat-card-content>
+  <mat-card-content
+    >Street: {{ userDetails.address["street"] }}</mat-card-content
+  >
+  <mat-card-content>Suite: {{ userDetails.address["suite"] }}</mat-card-content>
+  <mat-card-content>City: {{ userDetails.address["city"] }}</mat-card-content>
+  <mat-card-content
+    >ZipCode: {{ userDetails.address["zipcode"] }}</mat-card-content
+  >
+  <mat-card-content
+    >Geo lat: {{ userDetails.address["geo"]["lat"] }}</mat-card-content
+  >
+  <mat-card-content
+    >Geo lng: {{ userDetails.address["geo"]["lng"] }}</mat-card-content
+  >
+  <mat-card-content>Phone: {{ userDetails.phone }}</mat-card-content>
+  <mat-card-content>Website: {{ userDetails.website }}</mat-card-content>
+  <mat-card-content
+    >Company: {{ userDetails.company["name"] }}</mat-card-content
+  >
+  <mat-card-content
+    >Catch Phrase: {{ userDetails.company["catchPhrase"] }}</mat-card-content
+  >
+  <mat-card-content>Bs: {{ userDetails.company["bs"] }}</mat-card-content>
+  <button id="info"><a href="/reports/edit" class="edit">Edit</a></button>
+</mat-card>

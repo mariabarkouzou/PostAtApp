@@ -1,0 +1,18 @@
+.user-details {
+  margin: 20px;
+}
+
+#info {
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  border: 1px solid cornflowerblue;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 50px;
+}
+
+.edit {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}

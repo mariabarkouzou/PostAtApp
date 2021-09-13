@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/users.service';
 })
 export class ViewComponent implements OnInit {
   userId: string = '';
+  userDetails: any;
   constructor(
     private userService: UserService,
     private activatedRoute: ActivatedRoute
@@ -19,7 +20,7 @@ export class ViewComponent implements OnInit {
       this.userId = data.id;
     });
     this.userService.viewUser(this.userId).subscribe((data) => {
-      console.log(data);
+      this.userDetails = data;
     });
   }
 }

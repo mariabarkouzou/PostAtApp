@@ -5,14 +5,14 @@ import { ChartsModule } from 'ng2-charts';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UsersComponent } from './users/users.component';
 import { MatListModule } from '@angular/material/list';
-import { InfoComponent } from './info/info.component';
 import { RouterModule } from '@angular/router';
 import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
-  declarations: [BarChartComponent,UsersComponent, InfoComponent, ViewComponent, EditComponent],
-  imports: [CommonModule, ChartsModule,MatGridListModule,MatListModule,RouterModule],
+  declarations: [BarChartComponent,UsersComponent,ViewComponent, EditComponent],
+  imports: [CommonModule, ChartsModule,MatGridListModule,MatListModule,RouterModule,MatCardModule],
 })
 export class ReportsModule {}
