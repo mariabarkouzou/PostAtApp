@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#submit-btn{
+  background-color: cornflowerblue;
+  color: white;
+  border: 1px solid cornflowerblue;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+#submit-btn:hover {
+  background-color: #ff4081;
+}

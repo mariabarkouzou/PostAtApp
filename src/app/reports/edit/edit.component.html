@@ -1,36 +1,45 @@
+<a href="/reports/users"><img src="/assets/images/back.png" /></a>
+
 <div *ngIf="dataLoaded">
-  <form [formGroup]="editUserForm" (submit)="updateUser()">
+  <form [formGroup]="editUserForm" (submit)="updateUser()" class="container">
     <mat-form-field appearance="fill">
+      <h3>Name</h3>
       <mat-label>Name</mat-label>
       <input matInput formControlName="name" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <h3>Username</h3>
       <mat-label>Username</mat-label>
       <input matInput formControlName="username" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <h3>Email</h3>
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <h3>Address</h3>
       <mat-label>Address</mat-label>
       <input matInput formControlName="address" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <h3>Phone</h3>
       <mat-label>Phone</mat-label>
       <input matInput formControlName="phone" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <h3>Website</h3>
       <mat-label>Website</mat-label>
       <input matInput formControlName="website" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <h3>Company</h3>
       <mat-label>Company</mat-label>
       <input matInput formControlName="company" />
     </mat-form-field>
