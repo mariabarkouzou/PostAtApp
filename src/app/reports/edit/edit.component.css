@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 20%;
+  width: 90%;
   margin-left: 20px;
-  margin-bottom: 20px;
 }
 
-#submit-btn{
+#submit-btn {
   background-color: cornflowerblue;
   color: white;
   border: 1px solid cornflowerblue;
@@ -19,4 +18,33 @@
 
 #submit-btn:hover {
   background-color: #ff4081;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.company input {
+  width: 300px;
+}
+
+input {
+  margin-right: 15px;
+  height: 30px;
+}
+
+label {
+  padding: 5px;
+}
+
+.geo input {
+  margin-top: 15px;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/users.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edit',
@@ -17,7 +18,8 @@ export class EditComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -38,25 +40,25 @@ export class EditComponent implements OnInit {
             name: new FormControl(this.userDetails.name),
             username: new FormControl(this.userDetails.username),
             email: new FormControl(this.userDetails.email),
-            address: {
+            address: new FormGroup({
               street: new FormControl(this.userDetails.address.street),
               suite: new FormControl(this.userDetails.address.suite),
               city: new FormControl(this.userDetails.address.city),
               zipcode: new FormControl(this.userDetails.address.zipcode),
-              geo: {
+              geo: new FormGroup({
                 lat: new FormControl(this.userDetails.address.geo['lat']),
                 lng: new FormControl(this.userDetails.address.geo['lng']),
-              },
-            },
+              }),
+            }),
             phone: new FormControl(this.userDetails.phone),
             website: new FormControl(this.userDetails.website),
-            company: {
+            company: new FormGroup({
               name: new FormControl(this.userDetails.company['name']),
               catchPhrase: new FormControl(
                 this.userDetails.company['catchPhrase']
               ),
               bs: new FormControl(this.userDetails.company['bs']),
-            },
+            }),
           });
           this.dataLoaded = true;
         });
@@ -64,6 +66,13 @@ export class EditComponent implements OnInit {
   }
 
   updateUser() {
-    console.log(this.editUserForm.value);
+    this.userService.updateUser(this.userId , this.editUserForm.value).subscribe(
+      (data) => {
+        this._snackBar.open('User has been successfully updated ');
+      },
+      (err) => {
+        this._snackBar.open("User couldn't be updated");
+      }
+    );
   }
 }

@@ -1,49 +1,80 @@
 <a href="/reports/users"><img src="/assets/images/back.png" /></a>
 
-<div *ngIf="dataLoaded">
-  <form [formGroup]="editUserForm" (submit)="updateUser()" class="container">
-    <mat-form-field appearance="fill">
-      <h3>Name</h3>
-      <mat-label>Name</mat-label>
-      <input matInput formControlName="name" />
-    </mat-form-field>
+<mat-card class="container"
+  ><div *ngIf="dataLoaded">
+    <form [formGroup]="editUserForm" (submit)="updateUser()" class="edit-users">
+      <mat-form-field appearance="fill">
+        <h3>Name</h3>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <h3>Username</h3>
-      <mat-label>Username</mat-label>
-      <input matInput formControlName="username" />
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h3>Username</h3>
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <h3>Email</h3>
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="email" />
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <h3>Email</h3>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <h3>Address</h3>
-      <mat-label>Address</mat-label>
-      <input matInput formControlName="address" />
-    </mat-form-field>
+      <div formGroupName="address" class="address">
+        <mat-form-field appearance="fill">
+          <h3>Address</h3>
 
-    <mat-form-field appearance="fill">
-      <h3>Phone</h3>
-      <mat-label>Phone</mat-label>
-      <input matInput formControlName="phone" />
-    </mat-form-field>
+          <label for="street">Street: </label>
+          <input id="street" type="text" formControlName="street" />
 
-    <mat-form-field appearance="fill">
-      <h3>Website</h3>
-      <mat-label>Website</mat-label>
-      <input matInput formControlName="website" />
-    </mat-form-field>
+          <label for="suite">Suite: </label>
+          <input id="suite" type="text" formControlName="suite" />
 
-    <mat-form-field appearance="fill">
-      <h3>Company</h3>
-      <mat-label>Company</mat-label>
-      <input matInput formControlName="company" />
-    </mat-form-field>
+          <label for="city">City: </label>
+          <input id="city" type="text" formControlName="city" />
 
-    <button type="submit" id="submit-btn">Submit</button>
-  </form>
-</div>
+          <label for="zipcode">Zip Code: </label>
+          <input id="zipcode" type="text" formControlName="zipcode" />
+
+          <div formGroupName="geo" class="geo">
+            <label for="lat">Geo lat: </label>
+            <input id="lat" type="text" formControlName="lat" />
+
+            <label for="lng">Geo lng:</label>
+            <input id="lng" type="text" formControlName="lng" />
+          </div>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <h3>Phone</h3>
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <h3>Website</h3>
+        <mat-label>Website</mat-label>
+        <input matInput formControlName="website" />
+      </mat-form-field>
+
+      <div formGroupName="company" class="company">
+        <mat-form-field appearance="fill">
+          <h3>Company</h3>
+
+          <label for="name">Name: </label>
+          <input id="company-name" type="text" formControlName="name" />
+
+          <label for="catchPhrase">Catch Phrase: </label>
+          <input id="catchPhrase" type="text" formControlName="catchPhrase" />
+
+          <label for="bs">Bs: </label>
+          <input id="bs" type="text" formControlName="bs" />
+        </mat-form-field>
+      </div>
+
+      <button type="submit" id="submit-btn">Update</button>
+    </form>
+  </div>
+</mat-card>
