@@ -10,10 +10,10 @@ import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [BarChartComponent,UsersComponent,ViewComponent, EditComponent],
-  imports: [CommonModule, ChartsModule,MatGridListModule,MatListModule,RouterModule,MatCardModule,MatFormFieldModule],
+  imports: [CommonModule, ChartsModule,MatGridListModule,MatListModule,RouterModule,MatCardModule,MatFormFieldModule,FormsModule,ReactiveFormsModule],
 })
 export class ReportsModule {}
